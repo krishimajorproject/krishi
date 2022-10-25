@@ -34,11 +34,8 @@ decorator==5.0.9
 defusedxml==0.6.0
 Deprecated==1.2.13
 Django==3.0.8
-django-allauth==0.40.0
 django-background-tasks==1.2.5
-django-bootstrap-v5==1.0.0
 django-compat==1.0.15
-django-cors-headers==3.13.0
 django-crispy-forms==1.9.1
 django-db-file-storage==0.5.5
 django-debug-toolbar==2.2
