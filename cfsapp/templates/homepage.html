@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HomePage</title>
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+</head>
+<body> 
+    <div class="home_image">
+        <div class="slides">
+            <!--radio buttons start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!-- https://agromagazine.com/wp-content/uploads/2022/01/shutterstock_1728339670-scaled.jpg -->
+            
+            <div class="slide first">
+                <div class="black-glass" style="background-color: rgba(0, 0, 0, 0.014);"></div>
+                <div class="text-block">
+                    <div class="line"></div>
+                    <p style='font-size: 40px; margin-bottom:-10px;'>WELCOME TO</p>
+                    <p style='font-size: 50px; font-family: Monotype Corsiva; font-weight: bold; margin: 5 0 0 0;'>Krishi World</p>
+                    <p style='font-size: 30px;'>A MACHINE LEARNING BASED PROJECT</p>
+                    <p style='font-size: 30px;'>TO IMPROVE AGRICULTURE, IMPROVE LIVES</p>
+                </div>
+                
+                <img src="https://wallpaperstock.net/wallpapers/thumbs1/53392wide.jpg" alt="">
+            </div>
+            <div class="slide">
+                <div class="black-glass" style="background-color: rgba(0, 0, 0, 0.541);"></div>
+                <div class="text-block">
+                    <p style='font-size: 35px; margin-bottom:-20px;margin-top:-1px;'><br>CULTIVATE THE CROPS</p>
+                    <p style='font-size: 35px; margin: 5 0 0 0;'>BEST SUITED TO YOUR SOIL TYPE AND ENVIRONMENT</p>
+                    <p style='font-size: 30px; margin-bottom:-20px;'>WITH THE HELP OF</p>
+                    <p style='font-size: 50px; font-family: Monotype Corsiva; font-weight: bold; margin: -20 0 0 0;'>Krishi</p>
+                </div>
+                <img src="https://1.bp.blogspot.com/-kkMIO_nQuzo/Wbjx56BvdBI/AAAAAAAAAj0/qCCHtADjg_MQQcljsJDbp4mVamc1z5pYACLcBGAs/s1600/anh-panorama-canh-dong-co-hoa-vang-intranh-kinh-cuong-luc-lam-vach-bep%2B%252825%2529.jpg" alt="">
+            </div>
+            <div class="slide">
+                <div class="black-glass" style="background-color: rgba(0, 0, 0, 0.192);"></div>
+                <div class="text-block">
+                    <div class="line"></div>
+                    <p style='font-size: 35px; margin-bottom:-20px;margin-top:-1px;'><br>TELL KRISHI</p>
+                    <p style='font-size: 35px; margin-bottom:-20px;'>YOUR SOIL FACTORS</p>
+                    <p style='font-size: 35px; margin-bottom:-20px;'>AND KNOW WHAT FERTILIZERS CAN INCREASE YOUR</p>
+                    <p style='font-size: 35px; margin-bottom:-20px;'>SOIL FERTILITY</p>
+                </div>
+                <img src="https://images.wallpapersden.com/image/download/windmill-on-wheat-field-at-sunset_bGduZmqUmZqaraWkpJRnZWltrWZmamc.jpg" alt="">
+            </div>
+            <div class="slide">
+                <div class="black-glass" style="background-color: rgba(0, 0, 0, 0.26);"></div>
+                <div class="text-block">
+                    <div class="line"></div>
+                    <p style='font-size: 35px; margin-bottom:-20px;margin-top:-1px;'><br>LET KRISHI</p>
+                    <p style='font-size: 35px; margin-bottom:-20px;'>IDENTIFY CROP'S DISEASE</p>
+                    <p style='font-size: 35px; margin-bottom:-20px;'>AND GIVE PROPER MEDICATION AND TREATMENT</p>
+                    <p style='font-size: 35px; margin-bottom:-20px;'>FOR HEALTHY CROPS</p>
+                </div>
+                <img src="https://cdn.majorel.com/wp-content/uploads/2019/03/01135522/cropped_158202214-1024x591.jpg" alt="">
+            </div>
+            <div class="navigation-auto">
+
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+            <!--slide images end-->
+            <!--automatic navigation start-->
+            
+        </div>
+        
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+        
+    </div>
+    
+
+    <header class="header">
+        <p class="header_logo">Krishi</p>
+        <div class="header_components">
+            <p id="current_header">&nbsp Home</p>
+            <p><a href="{% url 'aboutus' %}">&nbsp About Us</a></p>
+            <p><a href="{% url 'cropreco' %}"> &nbsp Crops </a></p>
+            <p><a href="{% url 'ferti' %}"> &nbsp Fertilizers </a></p>
+            <p><a href="{% url 'disease' %}"> &nbsp Diseases </a></p>
+        </div>
+    </header>
+    <div class="body-content">
+        <!-- <div class=""> -->
+            <div class="our_service_left">
+                <img src="{% static 'images/Our_service.jpg' %}">
+                <div class="black-glass_left">
+                    <div class="try">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyu-Y4vAlvXG4e-dAZ6GDAn3lWGFSrxIHBEA&usqp=CAU" style="width:22px;height:40px;margin-left:375px;border-radius: 0px;margin-top: 270px;"/>
+                    </div>
+                    <p>OUR<br>SERVICES</p>
+                </div>
+            </div>
+            <div class="our_service_right">
+                <a href="{% url 'cropreco' %}">
+                    <div class="services" style="margin-bottom: 12px; background-color: rgb(255, 166, 0);">
+                        <img src="https://i1.wp.com/globalimpactnews.com/wp-content/uploads/2022/01/deadline-extended-call-for-papers-on-managing-land-and-water-for-climate-smart-agriculture.jpg?fit=555%2C312&ssl=1&resize=350%2C200">
+                        <div class="black-glass_right">
+                            <p>Crop Re-commendation</p>
+                        </div>
+                        <div class="text_block_right">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSxdLKI81RM8dlIZOC85SDAZccG7Y17qxY3yAF2cvH4D51EttLOex-X6YVPTfBPo70Pl8&usqp=CAU">
+                            <p>Recommending the crops that can be best grown in your soil type and tips to improve soil.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="{% url 'ferti' %}">
+                    <div class="services" style="margin-bottom: 12px; background-color: rgb(0, 110, 15);">
+                        <img src="https://cdn-biceg.nitrocdn.com/ASVqhSwaBPfLBEWuFRJHHXcWEyeJWxoC/assets/static/optimized/rev-d0d117d/wp-content/uploads/2020/05/Fertilizer_Buying_Guide_Banner_Image.jpg">
+                        <div class="black-glass_right">
+                            <p>Fertilizer Re-commendation</p>
+                        </div>
+                        <div class="text_block_right">
+                            <img src="https://cdn-icons-png.flaticon.com/512/2719/2719932.png">
+                            <p>Suggesting the best suited organic and inorganic fertilizers for a particular soil type.</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="{% url 'disease' %}">
+                    <div class="services" style="background-color: rgb(2, 0, 95);">
+                        <img src="https://wikiagri.fr/uploads/article/cover_custom/20588/home_big_tournesol_recherche.jpg">
+                        <div class="black-glass_right">
+                            <p>Diseases Prediction</p>
+                        </div>
+                        <div class="text_block_right">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4982/4982556.png">
+                            <p>Predicting the name and causes of crop disease and suggestions for it to cure.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+    </div>
+
+    <div class="footerr">
+        <p class="line" style="margin-bottom: -22px; font-weight: bold;">________________________________________</p>
+        <p>FOLLOW US</p>
+        <p style="margin-top: 5px;">ON</p>
+        <div class="icons">
+            <img src="https://www.stephenvilletx.gov/sites/default/files/imageattachments/hr/page/23820/facebook_icon_130940.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
+            <img src="https://www.freepngimg.com/download/social_media/74309-information-icons-media-twitter-computer-social-logo.png">
+        </div>
+        <p style="font-family: Calibri; font-size: 13px;">Developed by Shivani, Simran, Priyanka, Dipika</p>
+        <p style="font-family: Calibri; font-size: 13px; margin-top: 5px; margin-bottom: 6px;"> © 2022 Copyright: Terna TE-IT Sem-6 Batch - All rights reserved </p>
+    </div>
+    
+    <script>
+        const header = document.querySelector('.header');
+        window.onscroll = function(){
+            var top = window.scrollY;
+            console.log(top);
+            if (top >= 250){
+                header.classList.add('active')
+            }else{
+                header.classList.remove('active');
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+          document.getElementById('radio' + counter).checked = true;
+          counter++;
+          if(counter > 4){
+            counter = 1;
+          }
+        }, 5000);
+    </script>
+</body>
+</html>

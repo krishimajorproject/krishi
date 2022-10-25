@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Recommendation Result Page</title>
+    <link rel="stylesheet" href="{% static 'css/cropreco.css' %}">
+</head>
+<body>
+    <div class="result_image">
+        <img src="{% static 'images/crop_result.jpg' %}"/>
+        <div class="black-glass"></div>
+        <div class="text-block">
+            <!-- <h1 style="font-size: 40px;line-height: 0.3;font-family: cursive;">Which Crop should you grow??</h1> -->
+            <h5 style="font-size: 35px; margin-top: 100px;font-family: cursive;">Which crop should you grow??</h5>
+            
+        </div>
+    </div>
+    <header class="header">
+        <p class="header_logo">Krishi</p>
+        <div class="header_components">
+            <p><a href="{% url 'homepage' %}">&nbsp Home</a></p>
+            <p>&nbsp About Us</p>
+            <p id="current_header">&nbsp Crops</p>
+            <p><a href="{% url 'ferti' %}">&nbsp Fertilizers</a></p>
+            <p><a href="{% url 'disease' %}">&nbsp Diseases</a></p>
+        </div>
+    </header><br>
+        <p style="font-family: cursive; text-align: center; font-size: 35px;"><b> {{ ans }} </b></p>
+        <div class="image_box">
+            <img src='{% static 'images/'|add:ans|add:'.jpg' %}'>
+            <!-- <img src=""> -->
+        </div>
+    <br/>
+    <br/>
+    <div class="footerr">
+        <p class="line" style="margin-bottom: -22px; font-weight: bold;">________________________________________</p>
+        <p>FOLLOW US</p>
+        <p style="margin-top: 5px;">ON</p>
+        <div class="icons">
+            <img src="https://www.stephenvilletx.gov/sites/default/files/imageattachments/hr/page/23820/facebook_icon_130940.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
+            <img src="https://www.freepngimg.com/download/social_media/74309-information-icons-media-twitter-computer-social-logo.png">
+        </div>
+        <p style="font-family: Calibri; font-size: 13px;">Developed by Shivani, Simran, Priyanka, Dipika</p>
+        <p style="font-family: Calibri; font-size: 13px; margin-top: 5px; margin-bottom: 6px;"> © 2022 Copyright: Terna TE-IT Sem-6 Batch - All rights reserved </p>
+    </div>
+    <script>
+        const header = document.querySelector('.header');
+        window.onscroll = function(){
+            var top = window.scrollY;
+            console.log(top);
+            if (top >= 90){
+                header.classList.add('active')
+            }else{
+                header.classList.remove('active');
+            }
+        }
+    </script>
+    
+</body>
+</html>

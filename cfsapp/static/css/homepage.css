@@ -1,0 +1,432 @@
+@font-face {
+    font-family: 'Tw Cen MT';
+    src: local('Tw Cen MT'), url('../fonts/TwCenMTStd.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+}
+
+body, html{
+    height: 100vh;
+    margin: 0px;
+}
+
+/* Image Section */
+
+.home_image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(218, 218, 218);
+    margin: 0;
+    padding: 0; 
+}
+
+.slides{
+    width: 500%;
+    height: 100vh;
+    display: flex;
+    background-color: aqua;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+    position: relative;
+}
+
+.slide img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    padding: 0;
+    /* display: block; */
+    margin: 0 0 0 0;
+    
+}
+
+.slide .text-block {
+    position: absolute;
+    width: 100%;
+    top: 160px;
+    color: white;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-family: 'Calibri';
+    font-weight: bold;
+}
+
+.navigation-manual{
+    position: absolute;
+    width: fit-content;
+    right:0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: #40D3DC;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    margin-bottom: 36px;
+    top:auto;
+    bottom: 0;
+    z-index: 0;
+    right:0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #00eeff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #00ecf8;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC;
+  }
+
+
+/* .home_image img {
+    padding: 0;
+    margin: 0 0 0 0;
+    max-width: 100%;
+} */
+
+.black-glass {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+
+/* Header Section */ 
+
+header {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex; /* to get elememts in a ROW */
+    align-items: center; /* bring items vertically in a center */
+    background: rgba(0, 0, 0, 0.062);
+    color: white;
+    height: 65px;
+    position: fixed;
+    border-bottom: 0.5px solid rgba(150, 85, 0, 0.705);
+    transition: all 0.7s;
+    z-index: 100;
+}
+
+header.active {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex; /* to get elememts in a ROW */
+    align-items: center; /* bring items vertically in a center */
+    background: rgb(82, 82, 82);
+    color: white;
+    height: 65px;
+    position: fixed;
+    transition: all 0.7s;
+}
+
+.header_logo {
+    font-family: "Monotype Corsiva";
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top: 30px;
+}
+
+/* Header Options section and Effects */
+
+.header_components {
+    display: flex;
+    right: 30px;
+    font-family: Tw Cen MT;
+    font-weight: 200;
+    /* font-weight: bold; */
+    font-size: 19px;
+    position: absolute;
+}
+
+.header_components p{
+    margin: 24px 25px 0px 25px;
+}
+
+.header_components a{
+    text-decoration: none;
+    color: white;
+}
+
+.header_components p:hover {
+    color:rgb(255, 145, 0);
+    cursor: pointer;
+}
+
+.header_components p:after{
+    content: '';
+    display: block;
+    height: 16px;
+    width: 120%;
+    border-bottom: 3px solid rgb(255, 145, 0); 
+    border-radius: 2px;
+    transform: scaleX(0);  
+    transition: transform 200ms ease-in-out;
+  }
+
+#current_header:after {
+    transform: scaleX(1);
+  }
+
+
+p:hover:after{ transform: scaleX(1); }
+
+/* Body designing */
+
+.body-content{
+    width: 1115px;
+    margin: 50px auto;
+    display: flex;
+    /* transition: .3s; */
+    transform: scale(0.92);
+    transform-origin: 50% 50% 0px;
+    /* background-color: aqua; */
+}
+
+.our_service_left {
+    height: 577px;
+    width: 375px;
+    margin-right: 40px;
+    background-color: blue;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    /* overflow: hidden; */
+}
+
+.our_service_left img{
+    height: 581px;
+    width: 375px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.black-glass_left {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.288);
+}
+
+.black-glass_left p{
+    position: absolute;
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 40px;
+    width: fit-content;
+    height: max-content;
+    color: white;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 10px;
+    text-align: center;
+    align-items: center;
+    margin: auto auto;
+}
+
+.services {
+    height: 185.5px;
+    width: 700px;
+    /* background-color: rgb(255, 0, 34); */
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.our_service_right a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.black-glass_right{
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    width: 340px;
+    bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+
+.black-glass_right p{
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 20px;
+    width: fit-content;
+    color: white;
+    margin: 19px auto;
+}
+
+.services img{
+    height: 185.5px;
+    width: 350px;
+}
+
+.services:hover {
+    transition: .3s;
+    transform: scale(1.05);
+    transform-origin: 50% 50% 0px;
+}
+
+.services:active {
+    transition: .3s;
+    transform: scale(1.01);
+    transform-origin: 50% 50% 0px;
+}
+
+.text_block_right {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    bottom: 6px;
+    width: 350px;
+    font-family: "Calibri";
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.text_block_right p {
+    margin: auto 40px;
+    text-align: justify;
+}
+
+.text_block_right img{
+    height: 60px;
+    width: 60px;
+    margin: 20px 150px 0px 150px;
+}
+
+/* Footer Design */
+
+.footerr {
+    height: max-content;
+    font-size: 14px;
+    font-family: "Tw Cen MT";
+    background-color: black;
+    padding: 0.5px 0px 5px 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.footerr .line{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: -webkit-linear-gradient(0deg, rgba(254,254,254,1) 35%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footerr p{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.icons {
+    width: fit-content;
+    margin: 10px auto 0px auto;
+}
+
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin: 0px 15px;
+}
+
+.icons img:hover {
+    transition: .3s;
+    transform: scale(1.30);
+    transform-origin: 50% 50% 0px;
+}
+
+.icons img:active {
+    transition: .3s;
+    transform: scale(1.01);
+    transform-origin: 50% 50% 0px;
+}

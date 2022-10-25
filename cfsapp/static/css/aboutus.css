@@ -1,0 +1,239 @@
+body{
+    margin: 0px;
+    /* background-color:     #ff99ff ; */
+}
+@font-face {
+    font-family: 'Tw Cen MT';
+    src: local('Tw Cen MT'), url('../fonts/TwCenMTStd.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+}
+
+
+/* Image Section */
+
+.home_image {
+	/* position: relative;	 */
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    /* background-color: rgb(218, 218, 218); */
+    margin: 80;
+    padding: 0; 
+}
+.body-content{
+    position: relative;
+}
+
+.home_image img{
+    width: 100%;
+    /* height: 100vh; */
+    height: 400px;
+    z-index: -1;
+}
+
+.black-glass {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.text-block {
+    position: absolute;
+    top: 100px;
+    /* font-size: 50px; */
+    color: white;
+    /* margin-left: 80px; */
+}
+
+/* Header Section */ 
+
+.header {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    position: absolute;
+    display: flex; /* to get elememts in a ROW */
+    align-items: center; /* bring items vertically in a center */
+    background: rgba(0, 0, 0, 0.062);
+    color: white;
+    height: 65px;
+    position: fixed;
+    border-bottom: 0.5px solid rgba(150, 85, 0, 0.705);
+    transition: all 0.7s;
+    z-index: 100;
+}
+
+header.active {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex; /* to get elememts in a ROW */
+    align-items: center; /* bring items vertically in a center */
+    background: rgb(82, 82, 82);
+    color: white;
+    height: 65px;
+    position: fixed;
+    transition: all 0.7s;
+}
+
+.header_logo {
+    font-family: "Monotype Corsiva";
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top: 30px;
+}
+
+.header_components a{
+    text-decoration: none;
+    color: white;
+}
+
+.header_components {
+    display: flex;
+    right: 30px;
+    font-family: Tw Cen MT;
+    font-weight: 200;
+    /* font-weight: bold; */
+    font-size: 19px;
+    position: absolute;
+}
+
+.header_components p{
+    margin: 24px 25px 0px 25px;
+    /* border-bottom: 3px solid rgb(225, 234, 235); */
+}
+
+.header_components p:hover {
+    color:rgb(255, 145, 0);
+    cursor: pointer;
+}
+
+.header_components p:after{
+    content: '';
+    display: block;
+    height: 16px;
+    width: 120%;
+    border-bottom: 3px solid rgb(255, 145, 0); 
+    border-radius: 2px;
+    transform: scaleX(0);  
+    transition: transform 200ms ease-in-out;
+  }
+
+  #current_header:after {
+    transform: scaleX(1);
+  }
+
+
+p:hover:after{ transform: scaleX(1); }
+
+/* Body designing */
+
+.body-content{
+    margin: 10px 50px;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-right: 30px;
+}
+
+.about_img{
+    align-items: center;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.info2{
+    margin-top: 650px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+.about_img2{
+    float: left;
+    margin-left: 350px;
+   
+}
+.about_img2:hover{
+    transition: .3s;
+    transform: scale(1.15);
+    transform-origin: 50% 50% 0px;
+}
+
+.about_img3{
+    /* text-align: center; */
+    margin-left: 890px;
+}
+.about_img3:hover{
+    transition: .3s;
+    transform: scale(1.15);
+    transform-origin: 50% 50% 0px;
+}
+
+.abt_img4{
+    /* text-align: center; */
+    margin-left: 620px;
+    /* float: right; */
+    
+}
+.abt_img4:hover{
+    transition: .3s;
+    transform: scale(1.15);
+    transform-origin: 50% 50% 0px;
+}
+.footerr {
+    height: max-content;
+    font-size: 14px;
+    font-family: "Tw Cen MT";
+    background-color: black;
+    padding: 0.5px 0px 5px 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.footerr .line{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: -webkit-linear-gradient(0deg, rgba(254,254,254,1) 35%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footerr p{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.icons {
+    width: fit-content;
+    margin: 10px auto 0px auto;
+}
+
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin: 0px 15px;
+}
+
+.icons img:hover {
+    transition: .3s;
+    transform: scale(1.30);
+    transform-origin: 50% 50% 0px;
+}
+
+.icons img:active {
+    transition: .3s;
+    transform: scale(1.01);
+    transform-origin: 50% 50% 0px;
+}

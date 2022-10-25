@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Recommendation Page</title>
+    <link rel="stylesheet" href="{% static 'CSS/aboutus.css' %}">
+</head>
+<body>
+    <div class="home_image">
+        <!-- <img src="https://media.farsnews.ir/Uploaded/Files/Images/1400/11/09/14001109000057_Test_NewPhotoFree.jpg" alt=""/> -->
+        <img src="https://skgconsulting.com.au/wp-content/uploads/2021/08/aboutus-org.jpg" width="30px" height="40px"/>
+        <!-- https://www.bizcover.com.au/bizwitty/wp-content/uploads/2019/05/agsmes-810x488.png 
+        https://media.farsnews.ir/Uploaded/Files/Images/1400/11/09/14001109000057_Test_NewPhotoFree.jpg-->
+        <div class="black-glass"></div>
+        <div class="text-block">
+
+            <!-- <h1 style="font-size: 70px;line-height: 0.3;font-family: cursive;">About Us</h1> -->
+            <!-- <img src="https://skgconsulting.com.au/wp-content/uploads/2021/08/aboutus-org.jpg" width="30px" height="40px"/> -->
+            
+            
+        </div>
+    </div>
+    <header class="header">
+        <p class="header_logo">Krishi</p>
+        <div class="header_components">
+            <p><a href="{% url 'homepage' %}"style="text-decoration: none;color: white;">&nbsp Home</a></p>
+            <p id="current_header">&nbsp About Us</p>
+            <p style="text-decoration: none;color: white;"><a href="{% url 'cropreco' %}"style="text-decoration: none;color: white;">&nbsp Crops</a></p>
+            <p><a href="{% url 'ferti' %}"style="text-decoration: none;color: white;">&nbsp Fertilizers</a></p>
+            <p><a href="{% url 'disease' %}"style="text-decoration: none;color: white;">&nbsp Diseases</a></p>
+        </div>
+    </header><br>
+    <div class="about_img">   
+        <!-- <p style="margin-left:10px;margin-top:15rem;font-size: 20px;">Hello</p> -->
+        <img src="https://miro.medium.com/max/1400/1*ocyh2KDUta4JcMB-FHMFbg.jpeg" width="600px" height="350px" /><br>
+        <!-- <p>We use state-of-the-art machine learning and deep learning <br>
+            technologies to help you guide through the entire farming process.<br> 
+            Make informed decisions to understand the demographics of your area,<br>
+             understand the factors that affect your crop and keep them healthy<br>
+              for a super awesome successful yield.</p> -->
+    </div>
+    <div class="info">
+    
+        <h1 style="margin-left:80px;margin-top:2rem;font-size: 21px;font-family: inherit;line-height: 42px;letter-spacing: 2px;font-weight: 600;text-transform: uppercase;">
+            <b><i>Our Main Aim is to IMPROVE AGRICULTURE, IMPROVE LIVES, <br>CULTIVATE CROPS TO MAKE FARMERS<br> INCREASE PROFIT.</i></b><br>
+            <p style="float:right;margin-right: 200px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 15px;border: 5px solid grey;padding: 23px 80px;">We use state-of-the-art machine learning <br>
+                technologies to help you guide through<br> the entire farming process.<br> 
+                Make informed decisions to understand<br> the demographics of your area,<br>
+                 understand the factors that affect<br> your crop and keep them healthy<br>
+                  for a super awesome successful yield.</p>
+        </h1>
+        <!-- <p style="float:right;">We use state-of-the-art machine learning and deep learning <br>
+            technologies to help you guide through the entire farming process.<br> 
+            Make informed decisions to understand the demographics of your area,<br>
+             understand the factors that affect your crop and keep them healthy<br>
+              for a super awesome successful yield.</p>
+     -->
+    </div>
+       
+    <div class="info2">
+    ------------------------ THE SERVICES WE PROVIDE ------------------------
+
+    </div><br><br>
+    <div class="about_img2">
+        <p style="font-family: cursive;font-size: 20px;">Crop Recommendation</p>
+        <img src="https://www.wipo.int/export/sites/www/wipo_magazine/images/en/2017/2017_03_art_4_1_845.jpg" width="300px" height="200px" />
+
+    </div>
+    <div class="about_img3">
+        <p style="font-family: cursive;font-size: 20px;">Fertilizer Recommendation</p>
+        <img src="https://media.istockphoto.com/photos/farmer-giving-granulated-fertilizer-to-young-tomato-plants-picture-id959697442?k=20&m=959697442&s=612x612&w=0&h=jKQdAMM-aX6PsdFXgGexpdwM4qQf4OtdR-MvMMN9Ysg="
+        width="300px" height="200px" />
+    </div>
+    <div class="abt_img4">
+        <p style="font-family: cursive;font-size: 20px;margin-left: 75px;">Disease Prediction</p>
+        <img src="https://c1.wallpaperflare.com/preview/830/121/211/blackberry-orange-rust-plant.jpg" width="300px" height="200px" />
+    </div>
+    <br><br>
+    <!-- <div class="text">
+        <p style="margin-left:100px;margin-top:20px;">Hello</p>
+    </div> -->
+    <div class="footerr">
+        <p class="line" style="margin-bottom: -22px; font-weight: bold;">________________________________________</p>
+        <p>FOLLOW US</p>
+        <p style="margin-top: 5px;">ON</p>
+        <div class="icons">
+            <img src="https://www.stephenvilletx.gov/sites/default/files/imageattachments/hr/page/23820/facebook_icon_130940.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
+            <img src="https://www.freepngimg.com/download/social_media/74309-information-icons-media-twitter-computer-social-logo.png">
+        </div>
+        <p style="font-family: Calibri; font-size: 13px;">Developed by Shivani, Simran, Priyanka, Dipika</p>
+        <p style="font-family: Calibri; font-size: 13px; margin-top: 5px; margin-bottom: 6px;"> © 2022 Copyright: Terna TE-IT Sem-6 Batch - All rights reserved </p>
+    </div>
+    <script>
+        const header = document.querySelector('.header');
+        window.onscroll = function(){
+            var top = window.scrollY;
+            console.log(top);
+            if (top >= 250){
+                header.classList.add('active')
+            }else{
+                header.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

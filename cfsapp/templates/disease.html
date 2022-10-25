@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Prediction Page</title>
+    <link rel="stylesheet" href="{% static 'css/disease.css' %}">
+</head>
+<body>
+    <div class="home_image">
+        <!-- <img src="https://media.farsnews.ir/Uploaded/Files/Images/1400/11/09/14001109000057_Test_NewPhotoFree.jpg" alt=""/> -->
+        <img src="https://images.hdqwalls.com/wallpapers/winter-tree-leaf.jpg"/>
+        <div class="black-glass"></div>
+        <div class="text-block">
+            <h1 style="font-size: 40px;line-height: 0.3;font-family: cursive;">Disease</h1>
+            <h5 style="font-size: 30px; margin: 0px;font-family: cursive;">Identify your Crop Disease just by uploading the image <br> of the affected crop.</h5>
+            
+        </div>
+    </div>
+    <header class="header">
+        <p class="header_logo">Krishi</p>
+        <div class="header_components">
+            <p><a href="{% url 'homepage' %}">&nbsp Home</a></p>
+            <p><a href="{% url 'aboutus' %}">&nbsp About Us</a></p>
+            <p><a href="{% url 'cropreco' %}">&nbsp Crops</a></p>
+            <p><a href="{% url 'ferti' %}">&nbsp Fertilizers</a></p>
+            <p id="current_header">&nbsp Diseases</p>
+        </div>
+    </header><br>
+    <!-- <div class="body-content"> -->
+    <center>
+    <p class="body_head" style="font-family: cursive; text-align: center; "><b>CHECK THE DISEASE YOUR PLANT IS SUFFERING FROM</b></p>
+
+    <div class="container">
+         <div style="font-family:cursive; text-align:center;" class="file-text">Please Upload the Image:</div>
+
+        <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}        
+            <!-- {{ diseasefm.as_p }} -->
+            <div class="uploaded-image">
+                <img src="https://play-lh.googleusercontent.com/gM8j_yDC4D6Ncm_axDK0abhi0Ky0Yg1WuMU6ALhfXfOYGEhammwsEFEcbI_RP-MNEIem" id="output" height="300" />
+            </div><br>
+            <script>
+                var loadFile = function(event) {
+                    var image = document.getElementById('output');
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                };
+                </script>
+            <input type="file" required id="image-input" onchange="loadFile(event)" name="myfile" class="inp-file" accept="image/jpeg">
+            <br><br>
+            <input id="submit" class="message" type="submit" value="Find">
+            <br><br>
+            {{ msg }}
+        </form>
+    </div>
+    </center>
+    <!-- </div> -->
+    <br/>
+    <br/>
+    <div class="footerr">
+        <p class="line" style="margin-bottom: -22px; font-weight: bold;">________________________________________</p>
+        <p>FOLLOW US</p>
+        <p style="margin-top: 5px;">ON</p>
+        <div class="icons">
+            <img src="https://www.stephenvilletx.gov/sites/default/files/imageattachments/hr/page/23820/facebook_icon_130940.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
+            <img src="https://www.freepngimg.com/download/social_media/74309-information-icons-media-twitter-computer-social-logo.png">
+        </div>
+        <p style="font-family: Calibri; font-size: 13px;">Developed by Shivani, Simran, Priyanka, Dipika</p>
+        <p style="font-family: Calibri; font-size: 13px; margin-top: 5px; margin-bottom: 6px;"> © 2022 Copyright: Terna TE-IT Sem-6 Batch - All rights reserved </p>
+    </div>
+    <script>
+        const header = document.querySelector('.header');
+        window.onscroll = function(){
+            var top = window.scrollY;
+            console.log(top);
+            if (top >= 250){
+                header.classList.add('active')
+            }else{
+                header.classList.remove('active');
+            }
+        }
+    </script>
+    
+</body>
+</html>

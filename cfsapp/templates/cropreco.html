@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Recommendation Page</title>
+    <link rel="stylesheet" href="{% static 'css/cropreco.css' %}">
+</head>
+<body>
+    <div class="home_image">
+        <!-- <img src="https://media.farsnews.ir/Uploaded/Files/Images/1400/11/09/14001109000057_Test_NewPhotoFree.jpg" alt=""/> -->
+        <img src="https://w0.peakpx.com/wallpaper/89/610/HD-wallpaper-field-landscape-brown-beautiful-clouds-graphy-nice-green-grove-fields-land-scenery-blue-amazing-colors-sky-trees-cool-plants-agricvulture-awesome-nature-lines-earth-white-landscape.jpg"/>
+        <!-- https://www.bizcover.com.au/bizwitty/wp-content/uploads/2019/05/agsmes-810x488.png 
+        https://media.farsnews.ir/Uploaded/Files/Images/1400/11/09/14001109000057_Test_NewPhotoFree.jpg-->
+        <div class="black-glass"></div>
+        <div class="text-block">
+            <h1 style="font-size: 40px;line-height: 0.3;font-family: cursive;">Crops</h1>
+            <h5 style="font-size: 30px; margin: 0px;font-family: cursive;">Recommendation Crops based on atomsphere and<br> varoius soil factors</h5>
+            
+        </div>
+    </div>
+    <header class="header">
+        <p class="header_logo">Krishi</p>
+        <div class="header_components">
+            <p><a href="{% url 'homepage' %}">&nbsp Home</a></p>
+            <p><a href="{% url 'aboutus' %}">&nbsp About Us</a></p>
+            <p id="current_header">&nbsp Crops</p>
+            <p><a href="{% url 'ferti' %}">&nbsp Fertilizers</a></p>
+            <p><a href="{% url 'disease' %}">&nbsp Diseases</a></p>
+        </div>
+    </header><br>
+    <!-- <div class="body-content"> -->
+        <p style="font-family: cursive;text-align: center;"><b>KNOW WHAT BEST GROWS IN YOUR SOIL TYPE</b></p>
+        <div class="cform">
+            <div class="container">
+                <form action="{% url 'cropresult' %}"><br/><br/><br/><br/>
+                    {% csrf_token %}
+                    <div class="ui divider"></div>
+                        <div class="ui form">
+                            <div class="field">
+                                <div class="form_div">
+                                    <div class="count"></div>
+                                    <input type="any" class="form_input" name="Nitrogen" min="-1000000" max="1000000" required placeholder=" "/>
+                                    <label for="" class="form_label">Nitrogen</label>
+                                </div><br/><br/>
+                                <div class="form_div">
+                                    <div class="count"></div>
+                                    <input type="any" class="form_input" name="Phosphorous" min="-1000000" max="1000000" required placeholder=" "/>
+                                    <label for="" class="form_label">Phosphorous</label>
+                                </div><br/><br/>
+                                <div class="form_div">
+                                    <div class="count"></div>
+                                    <input type="any" class="form_input" name="Pottasium" min="-1000000" max="1000000" required placeholder=" "/>
+                                    <label for="" class="form_label">Pottasium</label>
+                                </div><br/><br/>
+                                <div class="form_div">
+                                    <div class="count"></div>
+                                    <input type="any" class="form_input" name="Temperature" min="-8" max="8" required placeholder=" "/>
+                                    <label for="" class="form_label">Temperature</label>
+                                </div><br/><br/>
+                                <div class="form_div">
+                                    <div class="count"></div>
+                                    <input type="any" class="form_input" name="Humidity" min="-8" max="8" required placeholder=" "/>
+                                    <label for="" class="form_label">Humidity</label>
+                                </div><br/><br/>
+                                <div class="form_div">
+                                    <div class="count"></div>
+                                    <input type="any" class="form_input" name="Ph" min="-8" max="8" required placeholder=" "/>
+                                    <label for="" class="form_label">Ph Level</label>
+                                </div><br/><br/>
+                                <div class="form_div">
+                                    <div class="count"></div>
+                                    <input type="any" class="form_input" name="Rainfall" min="-1000000" max="1000000" required placeholder=" "/>
+                                    <label for="" class="form_label">Rainfall in mm</label>
+                                </div><br/><br/><br/>
+                                    <!-- <div class="form_div">
+                                        <input type="text" class="form_input" required placeholder=" "/>
+                                        <label for="" class="form_label">Select state</label>
+                                        
+                                    </div><br/><br/> -->
+                                    <!-- ------------------------------------------------------------------------ -->
+                                <!-- <select class="form_div" style="border-radius: .5rem;border: 2.2px solid black;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                                    font-size: 20px;width:329px;height:55px;margin-left: 10px;background-color:  rgba(228, 226, 226, 0.582);" id="cars" name="cars">
+                                        <option  class="form_input" value="volvo">Select State</option>
+                                        <option  class="form_input" value="volvo">Aasam</option>
+                                        <option class="form_input" value="saab">Bengoal</option>
+                                        <option class="form_input" value="fiat">Chandigadh</option>
+                                        <option class="form_input" value="audi">Delhi</option>
+                                        <option class="form_input" value="audi">Chastishgadh</option>
+                                        <option class="form_input" value="audi">Jharkhand</option>
+                                        <option class="form_input" value="audi">Mhaharashtra</option>
+                                        <option class="form_input" value="audi">Kerala</option>
+                                        <option class="form_input" value="audi">Uttar Pradesh</option>
+                                </select> -->
+                                    <!-- -------------------------------------------------------------------- -->
+                                    <!-- <div class="form_div">
+                                        <input type="text" class="form_input" required placeholder=" "/>
+                                        <label for="" class="form_label">city</label>
+                                    </div><br/><br/> -->
+                                    <!-- -------------------------------------------------------------------------------------------------------------- -->
+                                <!-- <br/>
+                                <select class="form_div" style="border-radius: .5rem;border: 2.2px solid black;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                                    font-size: 20px;width:329px;height:55px;margin-left: 10px;background-color:  rgba(228, 226, 226, 0.582);" id="cars" name="cars">
+                                        <option  class="form_input" value="volvo">Select City</option>
+                                        <option  class="form_input" value="volvo">Ghansoli</option>
+                                        <option class="form_input" value="saab">Thane</option>
+                                        <option class="form_input" value="fiat">Airoli</option>
+                                        <option class="form_input" value="audi">Rabale</option>
+                                        <option class="form_input" value="audi">Koparkhairane</option>
+                                        <option class="form_input" value="audi">Turbhe</option>
+                                        <option class="form_input" value="audi">Juinagar</option>
+                                        <option class="form_input" value="audi">Nerul</option>
+                                        <option class="form_input" value="audi">Kharghar</option>
+                                </select> -->
+                                    <!-- --------------------------------------------------------------------------- -->
+                                    <!-- <br>
+                                    <div class="dropdown">
+                                        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                                        <div id="myDropdown" class="dropdown-content">
+                                        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                        <a href="#about">About</a>
+                                        <a href="#base">Base</a>
+                                        <a href="#blog">Blog</a>
+                                        <a href="#contact">Contact</a>
+                                        <a href="#custom">Custom</a>
+                                        <a href="#support">Support</a>
+                                        <a href="#tools">Tools</a>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <script>
+                                    /* When the user clicks on the button,
+                                    toggle between hiding and showing the dropdown content */
+                                    function myFunction() {
+                                        document.getElementById("myDropdown").classList.toggle("show");
+                                    }
+                                    
+                                    function filterFunction() {
+                                        var input, filter, ul, li, a, i;
+                                        input = document.getElementById("myInput");
+                                        filter = input.value.toUpperCase();
+                                        div = document.getElementById("myDropdown");
+                                        a = div.getElementsByTagName("a");
+                                        for (i = 0; i < a.length; i++) {
+                                        txtValue = a[i].textContent || a[i].innerText;
+                                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                            a[i].style.display = "";
+                                        } else {
+                                            a[i].style.display = "none";
+                                        }
+                                        }
+                                    }
+                                    </script>
+                                    -->
+                                    
+                                    <!-- <div class="form_div">
+                                        <input type="date" class="form_input" required placeholder=" "/>
+                                        <label for="" class="form_label">Date of Birth</label>
+                                    </div><br/><br/>
+                                    <div class="form_div">
+                                        <input type="password" class="form_input" required placeholder=" "/>
+                                        <label for="" class="form_label">Password</label>
+                                    </div><br/><br/>
+                                    <div class="form_div">
+                                        <input type="password" class="form_input" required placeholder=" "/>
+                                        <label for="" class="form_label"> Confirm Password</label>
+                                    </div><br/><br/> -->
+                            </div>
+    
+                                <!-- <br> -->
+                            <input type="submit" style="font-family: cursive;" class="sub_butn" name="Submit">
+                        </div>
+                </form>
+            </div>
+        </div>
+    <!-- </div> -->
+    <br/>
+    <br/>
+    <div class="footerr">
+        <p class="line" style="margin-bottom: -22px; font-weight: bold;">________________________________________</p>
+        <p>FOLLOW US</p>
+        <p style="margin-top: 5px;">ON</p>
+        <div class="icons">
+            <img src="https://www.stephenvilletx.gov/sites/default/files/imageattachments/hr/page/23820/facebook_icon_130940.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
+            <img src="https://www.freepngimg.com/download/social_media/74309-information-icons-media-twitter-computer-social-logo.png">
+        </div>
+        <p style="font-family: Calibri; font-size: 13px;">Developed by Shivani, Simran, Priyanka, Dipika</p>
+        <p style="font-family: Calibri; font-size: 13px; margin-top: 5px; margin-bottom: 6px;"> © 2022 Copyright: Terna TE-IT Sem-6 Batch - All rights reserved </p>
+    </div>
+    <script>
+        const header = document.querySelector('.header');
+        window.onscroll = function(){
+            var top = window.scrollY;
+            console.log(top);
+            if (top >= 250){
+                header.classList.add('active')
+            }else{
+                header.classList.remove('active');
+            }
+        }
+    </script>
+    
+</body>
+</html>

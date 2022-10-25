@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Tw Cen MT';
+    src: local('Tw Cen MT'), url('../fonts/TwCenMTStd.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+}
+
+body{
+    margin: 0px;
+}
+
+/* Image Section */
+
+.home_image {
+	position: relative;	
+}
+
+.header_components a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.home_image img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.black-glass {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.50);
+}
+
+.text-block {
+    position: absolute;
+    top: 100px;
+    /* font-size: 50px; */
+    color: white;
+    margin-left: 100px;
+}
+
+/* Header Section */ 
+
+.header {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    position: absolute;
+    display: flex; /* to get elememts in a ROW */
+    align-items: center; /* bring items vertically in a center */
+    background-color: rgba(0, 0, 0, 0.233);
+    color: white;
+    height: 65px;
+    position: fixed;
+    border-bottom: 0.5px solid rgba(150, 85, 0, 0.705);
+    transition: all 0.7s;
+}
+header.active {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex; /* to get elememts in a ROW */
+    align-items: center; /* bring items vertically in a center */
+    background: rgb(82, 82, 82);
+    color: white;
+    height: 65px;
+    position: fixed;
+    transition: all 0.7s;
+}
+
+
+.header_logo {
+    font-family: "Monotype Corsiva";
+    font-size: 30px;
+    margin-left: 35px;
+    margin-top: 30px;
+}
+
+/* Header Options section and Effects */
+
+.header_components {
+    display: flex;
+    right: 30px;
+    font-family: Tw Cen MT;
+    font-weight: 200;
+    /* font-weight: bold; */
+    font-size: 19px;
+    position: absolute;
+}
+
+.header_components p{
+    margin: 24px 25px 0px 25px;
+}
+
+.header_components p:hover {
+    color:rgb(255, 145, 0);
+    cursor: pointer;
+}
+
+.header_components p:after{
+    content: '';
+    display: block;
+    height: 16px;
+    width: 120%;
+    border-bottom: 3px solid rgb(255, 145, 0); 
+    border-radius: 2px;
+    transform: scaleX(0);  
+    transition: transform 200ms ease-in-out;
+  }
+
+  #current_header:after {
+    transform: scaleX(1);
+  }
+
+
+p:hover:after{ transform: scaleX(1); }
+
+/* Body designing */
+
+.body-content1{
+    margin: 10px 50px;
+}
+.cform1{
+    background-color: rgba(228, 226, 226, 0.582);
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    height: 472px;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    /* border: 1px solid grey; */
+    border-radius: 6px;
+    border: 7px solid green;
+    box-shadow: 3px 5px 3px;
+    
+}
+
+/*ubform_div*/
+.form_div1{
+    position: relative;
+    height: 15px;
+    width: 320px;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*form_ubinput*/
+.form_input1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    border: 2.2px solid black;
+    outline: none;
+    border-radius: .5rem;
+    background: none;
+    z-index: 1;
+    padding-top: 1.01rem;
+    padding-bottom: 1.01rem;
+  
+   
+  
+
+}
+.log1{
+    text-align: center;
+}
+/*ubform_label*/
+.form_label1{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 rem;
+    background-color: rgba(255, 255, 255, 0);
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-size: normal;
+    transition: .3s;
+    
+
+}
+/*Input focus move up label*/
+.form_input1:focus + .form_label1{
+    top: -.5rem;
+    left: .8rem;
+    color: green;
+    font-size: small;
+    font-size: 15px;
+    font-weight:500;
+    z-index: 10;
+    background-color: rgba(228, 226, 226, 0.938);
+}
+/*Input focus sticky top label*/
+.form_input1:not(:placeholder-shown).form_input1:not(:focus)+.form_label1{
+    top: -.5rem;
+    left: .8rem;
+    color: green;
+    font-size: small;
+    font-size: 15px;
+    font-weight: 500;
+    z-index: 10;
+    /* background-color: rgba(228, 226, 226, 0.582); */
+    background-color: rgba(228, 226, 226, 0.938);
+}
+
+/*Input focus*/
+.form_input1:focus{
+    border: 3px solid green;
+    background-color: rgba(228, 226, 226, 0.582);
+}
+
+.sub_butn1{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}
+
+/* Footer Design */
+
+.footerr {
+    height: max-content;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Tw Cen MT";
+    background-color: black;
+    padding: 0.5px 0px 5px 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.footerr .line{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: -webkit-linear-gradient(0deg, rgba(254,254,254,1) 35%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footerr p{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.icons {
+    width: fit-content;
+    margin: 10px auto 0px auto;
+}
+
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin: 0px 15px;
+}

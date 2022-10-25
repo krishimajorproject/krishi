@@ -1,0 +1,259 @@
+body{
+    margin: 0px;
+    /* background-color:     #ff99ff ; */
+}
+@font-face {
+    font-family: 'Tw Cen MT';
+    src: local('Tw Cen MT'), url('../fonts/TwCenMTStd.otf') format('opentype');
+    font-style: normal;
+    font-weight: 200;
+}
+
+/* Image Section */
+
+.home_image, .result_image {
+	position: relative;	
+}
+.body-content{
+    position: relative;
+}
+
+.home_image img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.result_image img{
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    box-shadow: rgba(0, 0, 0, 0.411) 0px 3px 8px;
+    object-fit: cover;
+}
+
+.home_image .black-glass {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.result_image .black-glass {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+.text-block {
+    position: absolute;
+    top: 100px;
+    /* font-size: 50px; */
+    color: white;
+    margin-left: 80px;
+}
+
+/* Header Section */ 
+
+.header {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    position: absolute;
+    display: flex; /* to get elememts in a ROW */
+    align-items: center; /* bring items vertically in a center */
+    background: rgba(0, 0, 0, 0.062);
+    color: white;
+    height: 65px;
+    position: fixed;
+    border-bottom: 0.5px solid rgba(150, 85, 0, 0.705);
+    transition: all 0.7s;
+    z-index: 100;
+}
+
+header.active {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex; /* to get elememts in a ROW */
+    align-items: center; /* bring items vertically in a center */
+    background: rgb(82, 82, 82);
+    color: white;
+    height: 65px;
+    position: fixed;
+    transition: all 0.7s;
+}
+
+.header_logo {
+    font-family: "Monotype Corsiva";
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top: 30px;
+}
+
+.header_components {
+    display: flex;
+    right: 30px;
+    font-family: 'Tw Cen MT';
+    font-weight: 200;
+    /* font-weight: bold; */
+    font-size: 19px;
+    position: absolute;
+}
+
+.header_components p{
+    margin: 24px 25px 0px 25px;
+    /* border-bottom: 3px solid rgb(225, 234, 235); */
+}
+
+.header_components a{
+    text-decoration: none;
+    color: white;
+}
+
+.header_components p:hover {
+    color:rgb(255, 145, 0);
+    cursor: pointer;
+}
+
+.header_components p:after{
+    content: '';
+    display: block;
+    height: 16px;
+    width: 120%;
+    border-bottom: 3px solid rgb(255, 145, 0); 
+    border-radius: 2px;
+    transform: scaleX(0);  
+    transition: transform 200ms ease-in-out;
+  }
+
+  #current_header:after {
+    transform: scaleX(1);
+  }
+
+p:hover:after{ transform: scaleX(1); }
+
+/* Body Design */
+
+.uploaded-image{
+    background: rgb(255, 255, 255);
+    width: fit-content;
+    height: 300px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.message {
+    width: 200px;
+    height: 40px;
+    font-family: cursive;
+    color: antiquewhite;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    background-image: linear-gradient(to bottom right, rgb(1, 134, 30), rgb(80, 150, 0));
+    cursor: pointer;
+    box-shadow: 2px 7px 0px 0 #001e3a;
+  }
+  
+  .message:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+  }
+
+.file-text{
+    padding-bottom: 10px;
+}
+
+input[type=file] { font-size:15px; width: 300px; border: 2px solid rgb(134, 132, 132); }
+
+  /* Footer Design */
+
+.footerr {
+    height: max-content;
+    font-size: 14px;
+    font-family: "Tw Cen MT";
+    background-color: black;
+    padding: 0.5px 0px 5px 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.footerr .line{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: -webkit-linear-gradient(0deg, rgba(254,254,254,1) 35%, rgba(0,0,0,1) 35%, rgba(0,0,0,1) 65%, rgba(255,255,255,1) 65%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footerr p{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+.icons {
+    width: fit-content;
+    margin: 10px auto 0px auto;
+}
+
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin: 0px 15px;
+}
+
+.image_box {
+    border: 3px solid rgb(10, 0, 100);
+    width: 450px;
+    height: 300px;
+    margin: 0 auto;
+}
+ 
+.image_box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.image_rectangle {
+    border: 3px solid rgb(10, 0, 100);
+    width: 300px;
+    height: 350px;
+    position: relative;
+    z-index: 20;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.image_rectangle img{
+    max-width: 300px;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 10;
+}
+
+.result_content {
+    width: 70%;
+    margin: 0 auto;
+    height: 500px;
+    border: 1px solid rgb(105, 98, 177);
+    background-color: rgb(212, 221, 212);
+    border-radius: 30px;
+}

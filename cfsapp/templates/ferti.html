@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fertilizer Recommendation Page</title>
+    <link rel="stylesheet" href="{% static 'CSS/ferti.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'images/ferti.jpg' %}"> -->
+    
+</head>
+<body>
+    <div class="home_image">
+        
+        <!-- <img src="https://iffco-public-assets.s3.ap-south-1.amazonaws.com/s3fs-public/2020-06/10-26-26-%28NPK%29.png"/> -->
+        <img src="{% static 'images/ferti.jpg' %}">
+        
+        <div class="black-glass"></div>
+        <div class="text-block">
+            <h1 style="font-size: 40px;line-height: 0.3;font-family: URW Chancery L;color: greenyellow;">FERTILIZERS</h1>
+            <h5 style="font-size: 30px; margin: 0px;font-family: URW Chancery L;">Recommends the best suited fertilizer<br> for a particular soil and crop</h5>
+            
+        </div>
+    </div>
+    <header class="header">
+        <p class="header_logo">Krishi</p>
+        <div class="header_components">
+            <p><a href="{% url 'homepage' %}" style="text-decoration: none;color: white;">&nbsp Home</a></p>
+            <p><a href="{% url 'aboutus' %}" style="text-decoration: none;color: white;">&nbsp About Us</a></p>
+            <p><a href="{% url 'cropreco' %}" style="text-decoration: none;color: white;">&nbsp Crops</a></p>
+            <p id="current_header"><a href="{% url 'ferti' %}" style="text-decoration: none;color: white;">&nbsp Fertilizers</a></p>
+            <p><a href="{% url 'disease' %}" style="text-decoration: none;color: white;">&nbsp Diseases</a></p>
+        </div>
+    </header>
+    <br>
+    <p style="font-family: cursive;text-align: center;"><b>GET INFORMED ADVICE ON FERTILIZERS BASED ON SOIL</b></p>
+    <div class="cform1">
+        <div class="container1">
+            <form action="{% url 'fertiresult' %}"><br/><br/><br/><br/>
+                {% csrf_token %}
+                <div class="ui divider1"></div>
+                    <div class="ui form1">
+                        <div class="field1">
+                            <div class="form_div1">
+                                <input type="text" name="nitro" class="form_input1" required placeholder=" "/>
+                                <label for="" class="form_label1">Nitrogen</label>
+                            </div><br/><br/>
+                            <div class="form_div1">
+                                <input type="text" name="phospho" class="form_input1" required placeholder=" "/>
+                                <label for="" class="form_label1">Phosphorous</label>
+                            </div><br/><br/>
+                            <div class="form_div1">
+                                <input type="text" name="pottas" class="form_input1" required placeholder=" "/>
+                                <label for="" class="form_label1">Pottasium</label>
+                            </div><br/><br/>
+                            
+                            
+                            <!-- ------------------------------------------------------------------------ -->
+                            <div>
+                                <select class="form_div1" name="crop_name" style="border-radius: .5rem;width:329px;height:55px;margin-left: 10px;background-color:  rgba(228, 226, 226, 0.582);border: 2.2px solid black;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;width:329px;height:55px;" id="cars" name="cars">
+                                    <option  class="form_input1" value="volvo">Select crop you want to grow</option>
+                                    <option  class="form_input1" value="Maize">Maize</option>
+                                    <option class="form_input1" value="Sugarcane">Sugarcane</option>
+                                    <option class="form_input1" value="Cotton">Cotton</option>
+                                    <option class="form_input1" value="Tobacco">Tobacco</option>
+                                    <option class="form_input1" value="Paddy">Paddy</option>
+                                    <option class="form_input1" value="Barley">Barley</option>
+                                    <option class="form_input1" value="Wheat">Wheat</option>
+                                    <option class="form_input1" value="Millets">Millets</option>
+                                    <option class="form_input1" value="Oil seeds">Oil seeds</option>
+                                    <option class="form_input1" value="Pulses">Pulses</option>
+                                    <option class="form_input1" value="Ground Nuts">Ground Nuts</option>
+                                </select>
+                            </div>
+                              
+                            <!-- -------------------------------------------------------------------- -->
+                        </div>           
+                           
+                    </div>
+                    <input type="submit" style="font-family: cursive;" class="sub_butn1" name="Submit">
+            </form>
+        </div>
+    </div>
+    <br/>
+    <br/>
+
+
+    <div class="footerr">
+        <p class="line" style="margin-bottom: -22px; font-weight: bold;">________________________________________</p>
+        <p>FOLLOW US</p>
+        <p style="margin-top: 5px;">ON</p>
+        <div class="icons">
+            <img src="https://www.stephenvilletx.gov/sites/default/files/imageattachments/hr/page/23820/facebook_icon_130940.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
+            <img src="https://www.freepngimg.com/download/social_media/74309-information-icons-media-twitter-computer-social-logo.png">
+        </div>
+        <p style="font-family: Calibri; font-size: 13px;">Developed by Shivani, Simran, Priyanka, Dipika</p>
+        <p style="font-family: Calibri; font-size: 13px; margin-top: 5px; margin-bottom: 6px;"> © 2022 Copyright: Terna TE-IT Sem-6 Batch - All rights reserved </p>
+    </div>
+
+    <script>
+        const header = document.querySelector('.header');
+        window.onscroll = function(){
+            var top = window.scrollY;
+            console.log(top);
+            if (top >= 250){
+                header.classList.add('active')
+            }else{
+                header.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
